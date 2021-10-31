@@ -1,11 +1,11 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({title}) => {
   return (
     <header>
       <nav className="nav">
         <div>
-          <a href="/">Rick and Morty App</a>
+          <a href="/">{title}</a>
         </div>
       </nav>
     </header>
