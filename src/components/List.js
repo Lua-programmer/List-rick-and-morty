@@ -11,7 +11,7 @@ const List = () => {
   }, [])
 
   const getCharacters = async () => {
-    const response = await Api.fetchFetAll();
+    const response = await Api.fetchGetAll();
     const data = await response.json();
     setCharacters(data.results)
   }
