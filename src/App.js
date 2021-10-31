@@ -6,6 +6,7 @@ function App() {
     <div className="app">
       <Switch>
         <Route path="/" exact={true} component={Home} />
+        
       </Switch>
     </div>
   );
