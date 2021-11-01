@@ -4,6 +4,7 @@ const Api = {
    fetchGetByID: (id) => {
        return fetch(`${Api.urlBase}/${id}`)
    },
+
 }
 
 export default Api

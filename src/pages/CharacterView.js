@@ -1,5 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import Header from '../components/Header'
 import Api from '../api/Api';
+import styled from "styled-components";
+import Button from '../components/Button'
+
+const Body = styled.body`
+  background-color: #190227;
+  height: 100vh;
+  padding: 20px;
+
+  img {
+    padding: 20px;
+    height: 300px
+  }
+
+  span, p {
+    color: white;
+  }
+
+`
 
 function CharacterView(props) {
   const _id = props.match.params.id;
@@ -19,17 +38,24 @@ function CharacterView(props) {
 
 
   return (
-    <div className="container">
+    <>
+      <Header title="Characteristics" />
       <div>
-        <img src={character.image}/>
-      </div>
+      <Body>
+      <img src={character.image}/>
+      <br />
       <span>Nome: {character.name}</span>
+      <hr />
+      <br />
       <span>Episódios</span>
-      <ul>
-        <li>{character.episode}</li>
-      </ul>
-
-    </div>
+      {/* <p style={{display: 'flex', justifyContent: 'center'}}>
+      {character.episode}
+      </p> */}
+      <br />
+      <Button />
+      </Body>
+      </div>
+    </>
   )
 }
 
